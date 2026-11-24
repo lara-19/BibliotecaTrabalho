@@ -6,11 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Sistema Biblioteca</h1>
+    <h1>Sistema de Cadastro</h1>
 
     <a href="form_funcionario.php"> Funcionario</a>
     <br>
-    <a href="form_livro.php">Livro</a>
     <br>
     <a href="form_leitor.php"> Leitor</a>
 </body>
