@@ -22,4 +22,17 @@ DEFINIÇÕES:
 - Deve trabalhar com envio de arquivos (foto ou outro  que fizer sentido).
 - Todo o projeto deve ser estilizado com CSS (Bootstrap), externo.
 
-
+1. Criar um banco de dados (ao menos 03 tabelas);
+2.O banco de dados deve possuir relacionamentos entre as tabelas;
+3. Deve possuir formulários capazes de inserir registros;
+4. Todo cadastro deve oferecer uma opção para edição dos registros já cadastrados;
+5. Ao menos um dos cadastros deve utilizar o campo <input type="checkbox"> com opções;
+6. Deve possuir ao menos uma página capaz de listar registros;
+7. Deve possuir opções de pesquisa de registros;
+8. Deve usar SESSION para controlar o acesso ao sistema (via login/senha);
+9. Deve trabalhar com envio de arquivos (foto ou outro que fizer sentido);
+10.Todo o projeto deve ser estilizado com CSS (Bootstrap, por exemplo);
+11. Deve utilizar Docker;
+12. O repositório deve conter o SQL capaz de criar o banco de dados;
+13. O repositório deve conter o SQL capaz de inserir alguns registros em todas as tabelas;
+14. O banco de dados deve ser criado automaticamente ao executar o comando docker compose up --build
