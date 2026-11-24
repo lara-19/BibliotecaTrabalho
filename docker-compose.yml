@@ -14,7 +14,7 @@ services:
     container_name: "mariadb-dw"
     restart: always
     volumes:
-      - ./banco.sql:/docker-entrypoint-initdb.d/banco.sql
+      - ./bancoescrito.sql:/docker-entrypoint-initdb.d/banco.sql
     environment:
       - MARIADB_USER=root
       - MARIADB_ROOT_PASSWORD=123
