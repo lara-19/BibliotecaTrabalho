@@ -19,7 +19,7 @@ $caminho_destino = "fotos_user/".$novo_nome;
 
 move_uploaded_file($caminho_temporario,$caminho_destino);
 
-$sql = "INSERT INTO fuuncionario (nome,cpf,email,senha,foto) VALUES (?,?,?,?)";
+$sql = "INSERT INTO funcionario (nome,cpf,email,senha,foto) VALUES (?,?,?,?)";
 
 $comando = mysqli_prepare($conexao, $sql);
 
