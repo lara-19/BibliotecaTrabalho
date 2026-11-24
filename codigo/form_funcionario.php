@@ -9,16 +9,24 @@
 
   <form action="salvar_funcionario.php" method="post" enctype="multipart/form-data">
 
-    <h1>Cadastro de funcionários.</h1> <br><br>
+    <h1>Cadastro de funcionários.</h1>
+     <br>
+     <br>
     Nome do funcionário: <br>
-    <input type="text" name="nome"> <br> <br>
+    <input type="text" name="nome"> <br> 
+    <br>
     CPF:
-    <input type="text" name="cpf"> <br> <br>
+    <input type="text" name="cpf"> <br>
+     <br>
     Email do Funcionário: <br>
-    <input type="text" name="email"> <br><br>
+    <input type="text" name="email"> <br>
+    <br>
 
     Senha:<br>
-    <input type="text" name="senha"> <br> <br>
+    <input type="text" name="senha"> 
+    <br> 
+    
+    <br>
     Foto: <br>
         <input type="file" name="foto"> <br><br>
         <br>
