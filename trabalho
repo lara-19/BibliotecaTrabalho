@@ -1,0 +1,25 @@
+usar github 
+dupla
+enviar zip do trabalho no moodle
+Gustavo Guanabara Youtube 
+
+DEFINIÇÕES:
+    - Entrega via moodle (.zip) até 22h30 do dia 01/12
+    - a dupla tem que usar GitHub OBRIGATÓRIO
+    - Só um da dupla precisa enviar
+    - Postar o link do GitHub (público).
+
+
+
+- Criar um banco de dados (ao menos 03 tabelas).✓
+- Deve existir relacionamentos entre as tabelas.✓
+- Deve possuir um formulário capaz de inserir registros.
+- Ao menos um dos cadastros deve usar o campo INPUT CHECKBOX com opções
+- Deve possuir ao menos uma pagina capaz de listar registros
+- Deve possuir OPÇÕES de pesquisa de registros.
+- Deve listar SESSION para controlar o acesso ao sistema (via login/senha).
+- Todo cadastro deve oferecer uma opção para edição dos registros.
+- Deve trabalhar com envio de arquivos (foto ou outro  que fizer sentido).
+- Todo o projeto deve ser estilizado com CSS (Bootstrap), externo.
+
+
