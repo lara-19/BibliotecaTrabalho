@@ -5,7 +5,7 @@
  $cpf = $_POST['cpf'];
  $email = $_POST['email'];
  $senha = $_POST['senha'];
-
+ $foto = $_POST['foto'];
 
  $nova_senha = password_hash($senha, PASSWORD_DEFAULT);
 
