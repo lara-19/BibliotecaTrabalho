@@ -21,11 +21,8 @@
     Email do Funcionário: <br>
     <input type="text" name="email"> <br>
     <br>
-
     Senha:<br>
     <input type="text" name="senha"> 
-    <br> 
-    
     <br>
     Foto: <br>
         <input type="file" name="foto"> <br><br>
