@@ -24,7 +24,7 @@ $sql = "INSERT INTO leitor (nome, email, cpf,senha,foto) VALUES (?, ?, ?, ? ,?)"
 
 $comando = mysqli_prepare($conexao, $sql);
 
-mysqli_stmt_bind_param($comando, "sssss", $nome, $email, $cpf);
+mysqli_stmt_bind_param($comando, "sssss", $nome, $email, $cpf,$senha,$foto);
 
 mysqli_stmt_execute($comando);
 
