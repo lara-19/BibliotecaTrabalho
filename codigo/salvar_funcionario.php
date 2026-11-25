@@ -5,7 +5,7 @@
  $cpf = $_POST['cpf'];
  $email = $_POST['email'];
  $senha = $_POST['senha'];
- $foto = $_POST['foto'];
+
 
  $nova_senha = password_hash($senha, PASSWORD_DEFAULT);
 
@@ -24,11 +24,10 @@ $sql = "INSERT INTO funcionario (nome,cpf,email,senha,foto) VALUES (?,?,?,?,?)";
 
 $comando = mysqli_prepare($conexao, $sql);
 
-mysqli_stmt_bind_param($comando, "sssss", $nome, $cpf, $email, $senha, $foto);
+mysqli_stmt_bind_param($comando, "sssss", $nome, $cpf, $email, $nova_senha, $novo_nome);
 
 mysqli_stmt_execute($comando);
 
 header("location:index.php");
 
-echo "<a href="form_livro.php">Livro</a>"
 ?>
