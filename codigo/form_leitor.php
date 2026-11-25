@@ -17,6 +17,20 @@
         CPF: <br>
         <input type="text" name="cpf"><br>
 
+        <br>
+
+        Email:<br>
+        <input type="text" name="email"> <br>
+
+        Senha:<br>
+        <input type="text" name="senha"> <br>
+        <br>
+
+        Foto: <br>
+        <input type="file" name="foto"> <br><br>
+        <br>
+
+
 
         <input type="submit" value="Cadastrar">
     </form>
