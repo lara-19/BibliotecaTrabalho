@@ -34,7 +34,9 @@
           
       <input type="submit" name="Cadastrar">
   </form>
-      
+
+  <br>
+       <a href="principal.php"> Voltar </a>
 
 </body>
 </html>

@@ -7,6 +7,8 @@
 </head>
 <body>
     <form action="salvar_leitor.php" method="post" enctype="multipart/form-data">
+
+        <h1>CADASTRO DE LEITORES</h1>
         
         Nome: <br>
         <input type="text" name="nome"><br>
@@ -30,5 +32,7 @@
      <input type="submit" name="Cadastrar">
 
     </form>
+    <br>
+      <a href="principal.php"> Voltar </a>
 </body>
 </html>
