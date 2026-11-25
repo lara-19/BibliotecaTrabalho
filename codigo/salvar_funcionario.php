@@ -30,5 +30,3 @@ mysqli_stmt_execute($comando);
 
 header("location:index.php");
 
-echo "<a href="form_livro.php">Livro</a>"
-?>
