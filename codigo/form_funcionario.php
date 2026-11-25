@@ -15,7 +15,7 @@
     Nome do funcionário: <br>
     <input type="text" name="nome"> <br> 
     <br>
-    CPF:
+    CPF:<br>
     <input type="text" name="cpf"> <br>
      <br>
     Email do Funcionário: <br>

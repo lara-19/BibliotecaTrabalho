@@ -16,6 +16,16 @@
 
         CPF: <br>
         <input type="text" name="cpf"><br>
+        <br>
+
+        Senha:<br>
+        <input type="text" name="senha"> <br>
+        <br>
+
+        Foto: <br>
+        <input type="file" name="foto"> <br><br>
+        <br>
+
 
         Senha:<br>
         <input type="password" name="senha"> 
