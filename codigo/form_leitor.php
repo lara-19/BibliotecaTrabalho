@@ -16,11 +16,7 @@
 
         CPF: <br>
         <input type="text" name="cpf"><br>
-
         <br>
-
-        Email:<br>
-        <input type="text" name="email"> <br>
 
         Senha:<br>
         <input type="text" name="senha"> <br>
