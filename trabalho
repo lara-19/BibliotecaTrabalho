@@ -13,7 +13,7 @@ DEFINIÇÕES:
 
 - Criar um banco de dados (ao menos 03 tabelas).✓
 - Deve existir relacionamentos entre as tabelas.✓
-- Deve possuir um formulário capaz de inserir registros.
+- Deve possuir um formulário capaz de inserir registros. 
 - Ao menos um dos cadastros deve usar o campo INPUT CHECKBOX com opções
 - Deve possuir ao menos uma pagina capaz de listar registros
 - Deve possuir OPÇÕES de pesquisa de registros.
