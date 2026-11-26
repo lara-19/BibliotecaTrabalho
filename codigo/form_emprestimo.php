@@ -1,29 +1,45 @@
+<?php
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>empréstimo</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Venha alugar seu livro!</h1>
-     <p>Preencha os campos abaixo.</p>
+     <form action="form_livro.php" method="post">
+        <h1>Escolha um Livro</h1>
+        <select name=livro>
 
-     Titulo:<br>
-     <input type="text" name="titulo">
-     <br><br>
-     Autor:<br>
-     <input type="text" name="autor">
-     <br><br>
-     Gênero:<br>
-     <input type="checkbox" name="genero">
-     <br><br>
-     Data de Recebimento:<br>
-     <input type="date" name="data_entrega">
-     <br>
-     Data de Devolução:<br>
-     <input type="date" name="data_recebimento">
-     <br><br>
-     <input type="submit" value="registrar">
+        <?php
+
+        require_omce "conexao.php";
+
+        $sql = "SELECT * FROM livros";
+
+        $comando = mysqli_prepare($conexao,$sql);
+        mysqli_stmt_execute($comando);
+        $livros mysqli_stmt_get_result($comando);
+
+        while ($livro = mysqli_fetch_array($livros)) {
+        
+            $livro_id = $livro['idlivro'];
+            $livro_titulo = $livro['titulo'];
+
+            echo "<option value='$livro_id'>$livro_titulo</option>";
+
+        }
+        ?>
+
+         </select> <br><br>
+
+        <input type="submit" value="Avançar">
+
+    </form>
+
 </body>
 </html>
