@@ -1,17 +1,50 @@
+
 <?php
- require_once "conexao.php";
 
- $data_entrega = $_POST['data_entrega'];
- $data_recebimento = $_POST['data_recebimento'];
+require_once "conexao.php";
 
-$sql = "INSERT INTO emprestimo(data_entrega,data_recebimento) VALUES (?,?)";
+$data_entrega = $_POST['data_entrega'];
+$data_recebimento = $_POST['data_recebimento'];
 
-$comando = mysqli_prepare($conexao, $sql);
+$idleitor = $_POST['idleitor'];
+$idfuncionario = $_POST['idfuncionario'];
 
-mysqli_stmt_bind_param($comando, "ii", $data_entrega, $data_recebimento);
+// Verifica se um livro foi selecionado
+if (isset($_POST['livros']) && count($_POST['livros']) == 1) {
 
-mysqli_stmt_execute($comando);
+    $idlivro = $_POST['livros'][0];
 
-header("location:index.php");
+    $sql = "INSERT INTO emprestimo
+    (data_entrega, data_recebimento, idleitor, idlivro, idfuncionario)
+    VALUES (?, ?, ?, ?, ?)";
+
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param(
+        $comando,
+        "ssiii",
+        $data_entrega,
+        $data_recebimento,
+        $idleitor,
+        $idlivro,
+        $idfuncionario
+    );
+
+    if (mysqli_stmt_execute($comando)) {
+
+        header("location:index.php");
+        exit;
+
+    } else {
+
+        echo "Erro ao salvar empréstimo!";
+
+    }
+
+} else {
+
+    echo "Selecione apenas um livro!";
+
+}
 
 ?>
