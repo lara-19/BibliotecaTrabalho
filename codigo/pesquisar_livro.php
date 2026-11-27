@@ -32,7 +32,7 @@ if (isset($_GET['valor'])) {
         <input type="submit" value="Pesquisar">
 
         <br><br>
-        <a href="principal.php">Voltar...</a>
+       
     </form>
 
     <?php
@@ -73,6 +73,8 @@ if (isset($_GET['valor'])) {
     <?php
     }
     ?>
+    <br>
+     <a href="tela_principal.php">Voltar...</a>
 </body>
 
 </html>

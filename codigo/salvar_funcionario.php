@@ -28,6 +28,6 @@ mysqli_stmt_bind_param($comando, "sssss", $nome, $cpf, $email, $nova_senha, $nov
 
 mysqli_stmt_execute($comando);
 
-header("location:index.php");
+header("location:listar_funcionario.php");
 
 ?>

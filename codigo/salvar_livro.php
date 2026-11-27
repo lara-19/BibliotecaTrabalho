@@ -18,5 +18,5 @@ mysqli_stmt_execute($comando);
 
 
 
-header("location:principal.php");
+header("location:listar_livro.php");
 ?>

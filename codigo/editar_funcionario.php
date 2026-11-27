@@ -1,49 +1,64 @@
 <?php
-session_start();
+require_once "conexao.php";
 
-if (!isset($_SESSION['idfuncionario'])) {
-    header("Location: index.php");
-    exit;
-}
+$id = $_GET['id'];
 
-header("Location: form_funcionario.php?editar=1");
-exit;
+$sql = "SELECT * FROM funcionario WHERE idfuncionario = ?";
+
+$comando = mysqli_prepare($conexao, $sql);
+
+mysqli_stmt_bind_param($comando, "i", $id);
+
+mysqli_stmt_execute($comando);
+
+$resultado = mysqli_stmt_get_result($comando);
+
+$l = mysqli_fetch_array($resultado);
+
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editar Funcionario</title>
 </head>
 <body>
-     <form action="salvar_funcionario.php" method="post" enctype="multipart/form-data">
 
-      <h1>Cadastro de funcionários.</h1>
-      <br>
+<h1>Editar Funcionario</h1>
 
-      Nome do funcionário: <br>
-      <input type="text" name="nome" value="<?php echo $nome; ?>"> <br> 
-      <br>
+<form action="resultado_funcionario.php" method="post" enctype="multipart/form-data"> </form>
 
-      CPF:<br>
-      <input type="text" name="cpf" value="<?php echo $cpf; ?>"> <br>
-      <br>
+    <input type="text" name="idfuncionario"
+    value="<?php echo $l['idfuncionario']; ?>">
 
-      Email do Funcionário: <br>
-      <input type="text" name="email" value="<?php echo $email; ?>"> <br>
-      <br>
+    Nome:<br>
+    <input type="text" name="nome"
+    value="<?php echo $l['nome']; ?>">
+    <br><br>
 
-      Senha:<br>
-      <input type="text" name="senha"value="<?php echo $senha; ?>"> 
-      <br>
+    Cpf:<br>
+    <input type="text" name="cpf"
+    value="<?php echo $l['cpf']; ?>">
+    <br><br>
 
-      Foto: <br>
-      <input type="file" name="foto"> <br>
-      <br>
-          
-      <input type="submit" name="Cadastrar">
-      
-  </form>
+    Email:<br>
+    <input type="text" name="email"
+    value="<?php echo $l['email']; ?>">
+    <br><br>
+
+    Senha:<br>
+    <input type="text" name="senha"
+    value="<?php echo $l['senha']; ?>">
+    <br><br>
+
+ 
+    Foto atual: <?php echo $l['foto']; ?>
+    <br><br>
+
+    <input type="submit" value="Salvar alterações">
+
+</form>
+
 </body>
 </html>

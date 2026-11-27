@@ -1,4 +1,3 @@
-
 <?php
 require_once "conexao.php";
 
@@ -30,7 +29,6 @@ $l = mysqli_fetch_array($resultado);
 
 <form action="resultado_livro.php" method="post">
 
-    <input type="hidden" name="idlivro"
     value="<?php echo $l['idlivro']; ?>">
 
     Título:<br>

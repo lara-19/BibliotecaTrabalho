@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?php
 
 
@@ -30,6 +31,8 @@ if (!isset($_GET['id'])) {
 }
 
 ?>
+=======
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,19 +48,19 @@ if (!isset($_GET['id'])) {
       <br>
 
       Nome do funcionário: <br>
-      <input type="text" name="nome" value="<?php echo $nome; ?>"> <br> 
+      <input type="text" name="nome"> <br> 
       <br>
 
       CPF:<br>
-      <input type="text" name="cpf" value="<?php echo $cpf; ?>"> <br>
+      <input type="text" name="cpf" > <br>
       <br>
 
       Email do Funcionário: <br>
-      <input type="text" name="email" value="<?php echo $email; ?>"> <br>
+      <input type="text" name="email"> <br>
       <br>
 
       Senha:<br>
-      <input type="text" name="senha"value="<?php echo $senha; ?>"> 
+      <input type="text" name="senha"> 
       <br>
 
       Foto: <br>

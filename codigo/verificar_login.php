@@ -30,7 +30,7 @@ if ($quantidade == 1) {
         $_SESSION['nome'] = $nome;
         $_SESSION['idfuncionario'] = $id;
 
-        header("Location: principal.php");
+        header("Location: tela_principal.php");
     } else {
         header("Location: index.php?erro=login&email=$email");
     }

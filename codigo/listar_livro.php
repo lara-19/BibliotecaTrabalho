@@ -50,6 +50,7 @@ $livros = mysqli_stmt_get_result($livro);
 
 
 </table>
-
+    <br>
+        <a href="pesquisar_livro.php"> Pesquisar Livros </a>
 </body>
 </html>
