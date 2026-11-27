@@ -26,9 +26,9 @@ DEFINIÇÕES:
 2.O banco de dados deve possuir relacionamentos entre as tabelas;✓
 3. Deve possuir formulários capazes de inserir registros;✓
 4. Todo cadastro deve oferecer uma opção para edição dos registros já cadastrados;
-5. Ao menos um dos cadastros deve utilizar o campo <input type="checkbox"> com opções;
+5. Ao menos um dos cadastros deve utilizar o campo <input type="checkbox"> com opções;✓
 6. Deve possuir ao menos uma página capaz de listar registros;
-7. Deve possuir opções de pesquisa de registros;
+7. Deve possuir opções de pesquisa de registros;✓
 8. Deve usar SESSION para controlar o acesso ao sistema (via login/senha);✓
 9. Deve trabalhar com envio de arquivos (foto ou outro que fizer sentido);✓
 10.Todo o projeto deve ser estilizado com CSS (Bootstrap, por exemplo);

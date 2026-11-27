@@ -20,13 +20,13 @@ if ($quantidade == 1) {
     if (password_verify($senha, $senha_banco)) {
         $nome = $linha['nome'];
         $email = $linha['email'];
-        $idusuario = $linha['idusuario'];
+        $id = $linha['idfuncionario'];
         // $foto = $linha['foto'];
 
         session_start();
         $_SESSION['email'] = $email;
         $_SESSION['nome'] = $nome;
-        $_SESSION['idusuario'] = $idusuario;
+        $_SESSION['idfuncionario'] = $id;
 
         header("Location: principal.php");
     } else {
