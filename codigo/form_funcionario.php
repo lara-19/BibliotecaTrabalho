@@ -1,4 +1,7 @@
 <?php
+
+
+
 require_once "form_funcionario.php";
 
 if (!isset($_GET['id'])) {
@@ -10,7 +13,7 @@ if (!isset($_GET['id'])) {
     $senha = "";
     $foto = "";
 } else {
-    //formulário preenchido
+    
     $id = $_GET['id'];
 
     $sql = "SELECT * FROM funcionario WHERE idfuncionario = $id";
