@@ -1,8 +1,3 @@
-<?php
-
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,35 +6,19 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-     <form action="form_livro.php" method="post">
-        <h1>Escolha um Livro</h1>
-        <select name=livro>
 
-        <?php
+<h2>Empréstimos</h2>
 
-        require_omce "conexao.php";
+<form action="salvar_emprestimo.php" method="post">
 
-        $sql = "SELECT * FROM livros";
+Data de Entrega:<br>
+<input type="date" name="data_entrega"><br><br>
 
-        $comando = mysqli_prepare($conexao,$sql);
-        mysqli_stmt_execute($comando);
-        $livros mysqli_stmt_get_result($comando);
-
-        while ($livro = mysqli_fetch_array($livros)) {
-        
-            $livro_id = $livro['idlivro'];
-            $livro_titulo = $livro['titulo'];
-
-            echo "<option value='$livro_id'>$livro_titulo</option>";
-
-        }
-        ?>
-
-         </select> <br><br>
-
-        <input type="submit" value="Avançar">
-
-    </form>
-
+<br>
+Data de Delução:<br>
+<input type="date" name="data_recebimento">
+<br><br>
+<input type="submit" name="Avançar"
+    
 </body>
 </html>
