@@ -16,5 +16,7 @@ mysqli_stmt_bind_param($comando, "sssss",$titulo,$autor,$anopublicacao,$editora,
 
 mysqli_stmt_execute($comando);
 
+
+
 header("location:principal.php");
 ?>

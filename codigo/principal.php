@@ -11,6 +11,6 @@
     <a href="form_funcionario.php"> Funcionario</a>
     <br>
     <br>
-    <a href="form_leitor.php"> Leitor</a>
+
 </body>
 </html>
