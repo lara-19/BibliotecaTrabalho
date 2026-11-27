@@ -44,19 +44,19 @@ if (isset($_GET['valor'])) {
             require_once "conexao.php";
 
             // SELECT * FROM usuario WHERE nome LIKE "%z%" OR apelido LIKE "%z%";
-            $sql = "SELECT * FROM livro WHERE nome LIKE ? OR autor LIKE ?";
+            $sql = "SELECT * FROM livro WHERE titulo LIKE ? OR autor LIKE ?";
             $comando = mysqli_prepare($conexao, $sql);
 
             mysqli_stmt_bind_param($comando, "ss", $valor, $valor);
 
             mysqli_stmt_execute($comando);
-            $usuarios = mysqli_stmt_get_result($comando);
+            $livros = mysqli_stmt_get_result($comando);
 
-            while ($usuario = mysqli_fetch_array($usuarios)) {
+            while ($livro = mysqli_fetch_array($livros)) {
     ?>
                 <div>
-                    <p>Nome: <?php echo $usuario['nome']; ?></p>
-                    <p>Autor: <?php echo $usuario['autor']; ?></p>
+                    <p>Nome: <?php echo $livro['titulo']; ?></p>
+                    <p>Autor: <?php echo $livro['autor']; ?></p>
 
                 </div>
             <?php
