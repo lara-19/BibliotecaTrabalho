@@ -1,3 +1,11 @@
+<?php
+require_once "conexao.php";
+
+$sql = "SELECT * FROM livro";
+$resultado = mysqli_query($conexao, $sql);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +26,26 @@ Data de Entrega:<br>
 Data de Delução:<br>
 <input type="date" name="data_recebimento">
 <br><br>
-<input type="submit" name="Avançar"
+
+Selecione um livro:<br>
+
+ <?php
+    while ($livro = mysqli_fetch_array($resultado)) {
+    ?>
+
+        <input type="checkbox"
+               name="livros[]"
+               value="<?php echo $livro['idlivro']; ?>">
+
+        <?php echo $livro['titulo']; ?>
+
+        <br>
+
+    <?php
+    }
+    ?>
+
+<input type="submit" name="Salvar"
     
 </body>
 </html>
